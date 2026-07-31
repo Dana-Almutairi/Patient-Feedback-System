@@ -86,25 +86,33 @@ Software Engineering Graduate
 
 ## 📊 Screenshots
 
-### Home Page
+### 🏠 Home Page
 
-> Screenshot will be added.
+![Home](images/home.png)
 
-### Patient Dashboard
+---
 
-> Screenshot will be added.
+### 📝 Patient Registration
 
-### Admin Dashboard
+![Register](images/register.png)
 
-> Screenshot will be added.
+---
 
-### Statistics
+### 👤 Patient Dashboard
 
-> Screenshot will be added.
+![Patient Dashboard](images/patient-dashboard.png)
 
-### Reports
+---
 
-> Screenshot will be added.
+### 🛠 Admin Dashboard
+
+![Admin Dashboard](images/admin-dashboard.png)
+
+---
+
+### 📈 Statistics
+
+![Statistics](images/statistics.png)
 
 ---
 

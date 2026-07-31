@@ -1,5 +1,12 @@
-# 🏥 Patient Feedback System
+<p align="center">
+  <img src="images/home.png" width="900">
+</p>
 
+# 🏥 Patient Feedback System
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-MVC-blue)
+![C#](https://img.shields.io/badge/C%23-.NET-purple)
+![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-red)
+![Bootstrap](https://img.shields.io/badge/UI-Bootstrap-7952B3)
 ## 📌 Overview
 
 Patient Feedback System is a web application developed using ASP.NET Core MVC that allows patients to submit feedback about healthcare services while providing administrators with tools to review, analyze, and manage patient responses.
@@ -10,37 +17,25 @@ The system helps healthcare organizations improve service quality by collecting 
 
 ## ✨ Features
 
-### Patient
-- Register a new account
-- Secure login and logout
-- Submit a feedback survey
-- View previous surveys
+### 👤 Patient
 
-### Administrator
-- Secure admin login
-- Dashboard with key statistics
-- View all surveys
-- Search surveys by patient name
-- Filter surveys by date
-- View patient details
-- View survey details
-- Delete surveys
-- Reports page
-- Statistics dashboard with charts
+- ✅ Register a new account
+- ✅ Secure login and logout
+- ✅ Submit patient feedback surveys
+- ✅ View previous submitted surveys
 
----
+### 👨‍💼 Administrator
 
-## 🛠 Technologies Used
-
-- ASP.NET Core MVC
-- C#
-- Entity Framework Core
-- SQL Server
-- HTML
-- CSS
-- Bootstrap
-- JavaScript
-- Chart.js
+- ✅ Secure administrator login
+- ✅ Dashboard with real-time statistics
+- ✅ View all patient surveys
+- ✅ Search surveys by patient name
+- ✅ Filter surveys by submission date
+- ✅ View patient details
+- ✅ View survey details
+- ✅ Delete surveys
+- ✅ Reports page
+- ✅ Interactive statistics dashboard
 
 ---
 
@@ -88,32 +83,28 @@ Software Engineering Graduate
 
 ### 🏠 Home Page
 
-![Home](images/home.png)
-
+<img src="images/home.png" width="900">
 ---
 
 ### 📝 Patient Registration
 
-![Register](images/register.png)
-
+<img src="images/register.png" width="900">
 ---
 
 ### 👤 Patient Dashboard
 
-![Patient Dashboard](images/patient-dashboard.png)
+<img src="images/patient-dashboard.png" width="900">
 
 ---
 
 ### 🛠 Admin Dashboard
 
-![Admin Dashboard](images/admin-dashboard.png)
-
+<img src="images/admin-dashboard.png" width="900">
 ---
 
 ### 📈 Statistics
 
-![Statistics](images/statistics.png)
-
+<img src="images/statistics.png" width="900">
 ---
 
 ## 📄 License

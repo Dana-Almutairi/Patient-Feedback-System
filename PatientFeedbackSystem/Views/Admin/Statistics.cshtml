@@ -1,0 +1,169 @@
+﻿<div class="container mt-5">
+
+    <h2 class="mb-4">Statistics</h2>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+
+            <div class="card bg-primary text-white shadow">
+
+                <div class="card-body">
+
+                    <h5>Total Patients</h5>
+
+                    <h2>@ViewBag.TotalPatients</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-3">
+
+            <div class="card bg-success text-white shadow">
+
+                <div class="card-body">
+
+                    <h5>Total Surveys</h5>
+
+                    <h2>@ViewBag.TotalSurveys</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-3">
+
+            <div class="card bg-info text-white shadow">
+
+                <div class="card-body">
+
+                    <h5>Average Rating</h5>
+
+                    <h2>@ViewBag.AverageRating</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row mt-3">
+
+        <div class="col-md-6 mb-3">
+
+            <div class="card border-success shadow">
+
+                <div class="card-body text-center">
+
+                    <h5>Highest Rating</h5>
+
+                    <h2 class="text-success">@ViewBag.HighestRating</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-6 mb-3">
+
+            <div class="card border-danger shadow">
+
+                <div class="card-body text-center">
+
+                    <h5>Lowest Rating</h5>
+
+                    <h2 class="text-danger">@ViewBag.LowestRating</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card shadow mt-4">
+
+        <div class="card-header bg-dark text-white">
+
+            Survey Statistics Chart
+
+        </div>
+
+        <div class="card-body">
+
+            <canvas id="myChart"></canvas>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+const chart = document.getElementById('myChart');
+
+new Chart(chart, {
+
+    type: 'bar',
+
+    data: {
+
+        labels: [
+
+            'Patients',
+
+            'Surveys',
+
+            'Average Rating'
+
+        ],
+
+        datasets: [{
+
+            label: 'Statistics',
+
+            data: [
+
+                @ViewBag.TotalPatients,
+
+                @ViewBag.TotalSurveys,
+
+                @ViewBag.AverageRating
+
+            ]
+
+        }]
+
+    },
+
+    options: {
+
+        responsive: true,
+
+        scales: {
+
+            y: {
+
+                beginAtZero: true
+
+            }
+
+        }
+
+    }
+
+});
+
+</script>

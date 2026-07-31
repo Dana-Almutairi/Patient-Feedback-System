@@ -1,0 +1,101 @@
+﻿<div class="container mt-5">
+
+    <h2 class="mb-4">Reports</h2>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+
+            <div class="card bg-primary text-white shadow">
+
+                <div class="card-body">
+
+                    <h5>Total Patients</h5>
+
+                    <h2>@ViewBag.TotalPatients</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-3">
+
+            <div class="card bg-success text-white shadow">
+
+                <div class="card-body">
+
+                    <h5>Total Surveys</h5>
+
+                    <h2>@ViewBag.TotalSurveys</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-3">
+
+            <div class="card bg-info text-white shadow">
+
+                <div class="card-body">
+
+                    <h5>Average Rating</h5>
+
+                    <h2>@ViewBag.AverageRating</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row mt-3">
+
+        <div class="col-md-6 mb-3">
+
+            <div class="card border-success shadow">
+
+                <div class="card-body text-center">
+
+                    <h5>Highest Rating</h5>
+
+                    <h2 class="text-success">@ViewBag.HighestRating</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-6 mb-3">
+
+            <div class="card border-danger shadow">
+
+                <div class="card-body text-center">
+
+                    <h5>Lowest Rating</h5>
+
+                    <h2 class="text-danger">@ViewBag.LowestRating</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="mt-4">
+
+        <a asp-action="Dashboard" class="btn btn-primary">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</div>

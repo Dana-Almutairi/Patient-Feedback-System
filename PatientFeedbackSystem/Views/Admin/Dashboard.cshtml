@@ -1,0 +1,122 @@
+﻿<div class="container mt-5">
+
+    <h2 class="mb-4">Admin Dashboard</h2>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+
+            <div class="card text-white bg-primary shadow">
+
+                <div class="card-body">
+
+                    <h5>Total Patients</h5>
+
+                    <h2>@ViewBag.TotalPatients</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-3">
+
+            <div class="card text-white bg-success shadow">
+
+                <div class="card-body">
+
+                    <h5>Total Surveys</h5>
+
+                    <h2>@ViewBag.TotalSurveys</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-3">
+
+            <div class="card text-white bg-warning shadow">
+
+                <div class="card-body">
+
+                    <h5>Today's Surveys</h5>
+
+                    <h2>@ViewBag.TodaySurveys</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card shadow mt-4">
+
+        <div class="card-header bg-dark text-white">
+
+            Recent Surveys
+
+        </div>
+
+        <div class="card-body">
+
+            <table class="table table-striped table-hover">
+
+                <thead class="table-dark">
+
+                    <tr>
+
+                        <th>Patient Name</th>
+
+                        <th>Rating</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in ViewBag.RecentSurveys)
+                    {
+                        <tr>
+
+                            <td>@item.Patient.Name</td>
+
+                            <td>@item.OverallRate</td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="mt-4">
+
+        <a asp-action="Statistics" class="btn btn-primary">
+            Statistics
+        </a>
+
+        <a asp-action="Reports" class="btn btn-success">
+            Reports
+        </a>
+
+        <a asp-action="AllSurveys" class="btn btn-info text-white">
+            All Surveys
+        </a>
+
+        <a asp-action="Logout" class="btn btn-danger">
+            Logout
+        </a>
+
+    </div>
+
+</div>

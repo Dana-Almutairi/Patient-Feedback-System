@@ -1,0 +1,22 @@
+﻿@model PatientFeedbackSystem.Models.Survey
+
+
+<h2>Survey Details</h2>
+
+<hr />
+
+<h3>Patient Name : @Model.Patient.Name</h3>
+
+<h3>Date : @Model.DateSubmitted</h3>
+
+<h3>Overall Rating : @Model.OverallRate</h3>
+
+<h3>Comments : @Model.Comments</h3>
+
+<br />
+
+<a asp-action="AllSurveys">
+
+    Back
+
+</a>

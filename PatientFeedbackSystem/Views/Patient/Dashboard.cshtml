@@ -1,0 +1,52 @@
+﻿@using Microsoft.AspNetCore.Http
+
+<div class="container mt-5">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-primary text-white">
+            <h2>Patient Dashboard</h2>
+        </div>
+
+        <div class="card-body">
+
+            <h4>
+                Welcome,
+                @Context.Session.GetString("PatientName")
+            </h4>
+
+            <hr />
+
+            <div class="d-grid gap-3">
+
+                <a asp-controller="Survey"
+                   asp-action="TakeSurvey"
+                   class="btn btn-success btn-lg">
+
+                    Take Survey
+
+                </a>
+
+                <a asp-controller="Patient"
+                   asp-action="PreviousSurveys"
+                   class="btn btn-info btn-lg text-white">
+
+                    View Previous Surveys
+
+                </a>
+
+                <a asp-controller="Patient"
+                   asp-action="Logout"
+                   class="btn btn-danger btn-lg">
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

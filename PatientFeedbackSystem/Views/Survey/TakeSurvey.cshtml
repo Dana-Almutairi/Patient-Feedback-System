@@ -1,0 +1,89 @@
+﻿@model PatientFeedbackSystem.Models.SurveyViewModel
+
+<h2>Patient Feedback Survey</h2>
+
+<form asp-action="TakeSurvey" method="post">
+
+
+    <h3>Doctors (1 - 5)</h3>
+
+    <input asp-for="Doctors" min="1" max="5" />
+
+    <br /><br />
+
+
+    <h3>Nursing (1 - 5)</h3>
+
+    <input asp-for="Nursing" min="1" max="5" />
+
+    <br /><br />
+
+
+    <h3>Reception (1 - 5)</h3>
+
+    <input asp-for="Reception" min="1" max="5" />
+
+    <br /><br />
+
+
+    <h3>Appointments (1 - 5)</h3>
+
+    <input asp-for="Appointments" min="1" max="5" />
+
+    <br /><br />
+
+
+    <h3>Emergency (1 - 5)</h3>
+
+    <input asp-for="Emergency" min="1" max="5" />
+
+    <br /><br />
+
+
+    <h3>Laboratory (1 - 5)</h3>
+
+    <input asp-for="Laboratory" min="1" max="5" />
+
+    <br /><br />
+
+
+    <h3>Radiology (1 - 5)</h3>
+
+    <input asp-for="Radiology" min="1" max="5" />
+
+    <br /><br />
+
+
+    <h3>Pharmacy (1 - 5)</h3>
+
+    <input asp-for="Pharmacy" min="1" max="5" />
+
+    <br /><br />
+
+
+    <h3>Cleanliness (1 - 5)</h3>
+
+    <input asp-for="Cleanliness" min="1" max="5" />
+
+    <br /><br />
+
+
+    <h3>Additional Comments</h3>
+
+    <textarea asp-for="Comments">
+
+    </textarea>
+
+
+    <br />
+    <br />
+
+
+    <button type="submit">
+
+        Submit Survey
+
+    </button>
+
+
+</form>

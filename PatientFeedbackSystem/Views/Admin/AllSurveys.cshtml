@@ -1,0 +1,125 @@
+﻿@model List<PatientFeedbackSystem.Models.Survey>
+
+<div class="container mt-5">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-dark text-white">
+            <h2>All Surveys</h2>
+        </div>
+
+        <div class="card-body">
+
+            <form method="get" class="row g-3 mb-4">
+
+                <div class="col-md-4">
+                    <input type="text"
+                           name="search"
+                           class="form-control"
+                           placeholder="Patient Name" />
+                </div>
+
+                <div class="col-md-3">
+                    <input type="date"
+                           name="startDate"
+                           class="form-control" />
+                </div>
+
+                <div class="col-md-3">
+                    <input type="date"
+                           name="endDate"
+                           class="form-control" />
+                </div>
+
+                <div class="col-md-2">
+                    <button type="submit"
+                            class="btn btn-primary w-100">
+
+                        Search
+
+                    </button>
+                </div>
+
+            </form>
+
+            <table class="table table-bordered table-hover table-striped align-middle">
+
+                <thead class="table-dark">
+
+                    <tr>
+
+                        <th>Patient</th>
+                        <th>Date</th>
+                        <th>Rate</th>
+                        <th>Status</th>
+                        <th>Survey</th>
+                        <th>Patient Details</th>
+                        <th>Delete</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.Patient.Name</td>
+
+                            <td>@item.DateSubmitted.ToShortDateString()</td>
+
+                            <td>@item.OverallRate</td>
+
+                            <td>@item.Status</td>
+
+                            <td>
+
+                                <a asp-action="SurveyDetails"
+                                   asp-route-id="@item.SurveyID"
+                                   class="btn btn-info btn-sm text-white">
+
+                                    View
+
+                                </a>
+
+                            </td>
+
+                            <td>
+
+                                <a asp-action="PatientDetails"
+                                   asp-route-id="@item.PatientID"
+                                   class="btn btn-secondary btn-sm">
+
+                                    View
+
+                                </a>
+
+                            </td>
+
+                            <td>
+
+                                <a asp-action="DeleteSurvey"
+                                   asp-route-id="@item.SurveyID"
+                                   class="btn btn-danger btn-sm"
+                                   onclick="return confirm('Are you sure you want to delete this survey?');">
+
+                                    Delete
+
+                                </a>
+
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
